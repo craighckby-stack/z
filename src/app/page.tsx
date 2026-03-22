@@ -44,6 +44,7 @@ interface LogicGate {
 }
 
 interface EncryptedPacket {
+  id: string;        // Unique identifier
   data: string;      // Base64 encrypted binary
   iv: string;        // Initialization vector
   tag: string;       // Authentication tag

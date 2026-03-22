@@ -575,7 +575,7 @@ export async function POST(request: NextRequest) {
       };
 
       // Import and use shared storage storage function
-      const { storeMemory } = await import('../shared/storage');
+      const { storeMemory } = await import('../shared/memory');
       storeMemory(storageData);
     } catch (storageError) {
       console.error('Failed to store storage:', storageError);

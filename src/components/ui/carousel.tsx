@@ -48,7 +48,7 @@ function Carousel({
   setApi,
   plugins,
   className,
-  basicren,
+  children,
   ...props
 }: React.ComponentProps<"div"> & CarouselProps) {
   const [carouselRef, api] = useEmblaCarousel(
@@ -126,7 +126,7 @@ function Carousel({
         data-slot="carousel"
         {...props}
       >
-        {basicren}
+        {children}
       </div>
     </CarouselContext.Provider>
   )

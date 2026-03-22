@@ -56,7 +56,7 @@ function ContextMenuRadioGroup({
 function ContextMenuSubTrigger({
   className,
   inset,
-  basicren,
+  children,
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.SubTrigger> & {
   inset?: boolean
@@ -71,7 +71,7 @@ function ContextMenuSubTrigger({
       )}
       {...props}
     >
-      {basicren}
+      {children}
       <ChevronRightIcon className="ml-auto" />
     </ContextMenuPrimitive.SubTrigger>
   )
@@ -136,7 +136,7 @@ function ContextMenuItem({
 
 function ContextMenuCheckboxItem({
   className,
-  basicren,
+  children,
   checked,
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.CheckboxItem>) {
@@ -155,14 +155,14 @@ function ContextMenuCheckboxItem({
           <CheckIcon className="size-4" />
         </ContextMenuPrimitive.ItemIndicator>
       </span>
-      {basicren}
+      {children}
     </ContextMenuPrimitive.CheckboxItem>
   )
 }
 
 function ContextMenuRadioItem({
   className,
-  basicren,
+  children,
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.RadioItem>) {
   return (
@@ -179,7 +179,7 @@ function ContextMenuRadioItem({
           <CircleIcon className="size-2 fill-current" />
         </ContextMenuPrimitive.ItemIndicator>
       </span>
-      {basicren}
+      {children}
     </ContextMenuPrimitive.RadioItem>
   )
 }

@@ -48,7 +48,7 @@ function DialogOverlay({
 
 function DialogContent({
   className,
-  basicren,
+  children,
   showCloseButton = true,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Content> & {
@@ -65,7 +65,7 @@ function DialogContent({
         )}
         {...props}
       >
-        {basicren}
+        {children}
         {showCloseButton && (
           <DialogPrimitive.Close
             data-slot="dialog-close"
