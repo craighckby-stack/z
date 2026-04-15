@@ -1,194 +1,63 @@
-# 🔐 BINARY AI SYSTEM - ZERO-TEXT POLICY
+# z
 
-<div align="center">
+**z** is a sophisticated framework for developing and researching AI emergence through a multi-layered consciousness simulation architecture. It combines high-level agentic reasoning (Generator, Auditor, Refiner) with a low-level binary logic processing engine to create a self-correcting, evolving intelligence system.
 
-![System Status](https://img.shields.io/badge/Status-Encrypted-red)
-![Security Level](https://img.shields.io/badge/Security-Maximum-red)
-![Text Policy](https://img.shields.io/badge/Text-Zero%20Text-blue)
-![Access Type](https://img.shields.io/badge/Access-Binary%20Only-green)
+## 🏗 Architecture
 
-</div>
+The project is built on a ternary processing cycle designed to simulate cognitive development:
 
-## 🚨 ZERO-TEXT POLICY ENFORCED
+### 1. Z-Consciousness Engine
+Located in `src/app/api/z/process`, this module manages the **Emergence Stages** of the AI:
+- **Initial (Baby AGI):** Primitive exploration and pattern matching.
+- **Basic/Intermediate:** Transitioning from simple language to logical reasoning.
+- **Young Advanced/Stable:** Mature cognitive processing with high confidence levels.
 
-**This system contains ZERO text content. All documentation is binary encryption/decryption information only.**
+### 2. Binary Logic Layer
+A unique simulation layer (`src/app/api/binary`) that emulates hardware-level processing:
+- **Logic Gates:** Virtualized AND, OR, NOT, XOR, and NAND gates.
+- **Binary Units:** Specialized processors (Analyzer, Validator, Optimizer) that handle data packets with specific cycle costs and efficiency metrics.
+- **Packet Validation:** Checksum-based integrity checks for all internal data movement.
 
-### Binary Encryption Standards:
-- **AES-256-GCM**: Primary encryption algorithm
-- **RSA-4096**: Key exchange protocol  
-- **SHA-512**: Hash verification
-- **HMAC-SHA256**: Message authentication
-- **Binary-Only**: No plaintext text anywhere in system
+### 3. Constraint & Memory Systems
+- **Violation Detection:** Real-time auditing for factual inaccuracies, logical paradoxes, and safety breaches.
+- **Knowledge Graph:** A persistence layer (`src/app/api/z/memory`) that maps concepts into a weighted graph, tracking associations, violations, and cognitive insights over time.
 
-### Security Protocols:
-- **Zero-Knowledge Architecture**: No plaintext storage
-- **Perfect Forward Secrecy**: Compromise protection
-- **End-to-End Encryption**: All data encrypted
-- **Key-Based Access**: Authentication required
-- **Binary Processing**: Operations on encrypted data only
+## 🚀 Key Features
 
-## 🔐 BINARY ENCRYPTION SPECIFICATIONS
+- **Emergent Behavior Experiments:** Integrated framework for running constraint-optimization trials across different conditions (Z-AI, Few-Shot, etc.).
+- **Real-time Monitoring:** Dashboard featuring system clocks, logic gate statuses, and encryption packet tracking.
+- **Advanced UI:** Built with Radix UI and Tailwind CSS, featuring a command-center aesthetic with real-time charts and system logs.
+- **Hybrid WebSocket Support:** Integrated Socket.io implementation for low-latency system communication.
 
-### Data Encryption:
-```typescript
-interface BinaryEncryption {
-  algorithm: 'AES-256-GCM';
-  keyLength: 256;
-  ivLength: 12;
-  tagLength: 16;
-  mode: 'GCM';
-}
+## 🛠 Tech Stack
 
-interface EncryptedPacket {
-  data: string;      // Base64 encrypted binary
-  iv: string;        // Initialization vector
-  tag: string;       // Authentication tag
-  keyId: string;    // Encryption key identifier
-  timestamp: number; // Encryption timestamp
-}
-```
+- **Runtime:** Bun
+- **Framework:** Next.js 15 (App Router)
+- **Database:** Prisma with custom DB storage
+- **UI Components:** Radix UI, Shadcn/ui, Lucide React, Recharts
+- **Networking:** Socket.io, Caddy (Reverse Proxy)
+- **Security:** AES-256-GCM encrypted packet handling
 
-### Key Management:
-```typescript
-interface EncryptionKey {
-  id: string;
-  publicKey: string;    // Base64 encoded
-  privateKey: string;   // Encrypted storage
-  algorithm: 'RSA-4096';
-  created: number;
-  expires: number;
-  usage: 'ENCRYPT' | 'DECRYPT';
-}
-```
+## 📥 Getting Started
 
-## 🔓 DECRYPTION PROTOCOLS
+1.  **Install Dependencies:**
+    bash
+    bun install
+    
+2.  **Setup Database:**
+    bash
+    bunx prisma generate
+    
+3.  **Run Development Server:**
+    bash
+    bun dev
+    
+4.  **Run Experiments:**
+    Execute the constraint-learning pilot:
+    bash
+    bun run experiments/constraint-learning/implementation/run-pilot.ts
+    
 
-### Decryption Process:
-1. **Key Verification**: Validate encryption key
-2. **Packet Authentication**: Verify HMAC signature
-3. **Binary Extraction**: Decrypt to binary data
-4. **Checksum Validation**: Verify data integrity
-5. **Binary Processing**: Process decrypted binary
+## 🧪 Research Modules
 
-### Security Layers:
-- **Transport Layer**: TLS 1.3 with perfect forward secrecy
-- **Application Layer**: End-to-end encryption
-- **Data Layer**: Binary-only processing
-- **Access Layer**: Key-based authentication
-
-## 🔑 ACCESS CONTROL
-
-### Authentication Requirements:
-- **Encryption Key**: Required for all operations
-- **Key Validation**: Cryptographic verification
-- **Session Management**: Secure key exchange
-- **Access Logging**: All decryption attempts logged
-- **Rate Limiting**: Brute force protection
-
-### Binary Processing:
-- **Encrypted Input**: All binary data encrypted
-- **Memory Protection**: No plaintext in memory
-- **Secure Processing**: Binary operations only
-- **Encrypted Output**: Results encrypted before transmission
-
-## 🔒 SECURITY COMPLIANCE
-
-### Standards Compliance:
-- **FIPS 140-2**: Validated cryptographic modules
-- **Common Criteria**: EAL 4+ certification
-- **ISO/IEC 27001**: Information security management
-- **GDPR Compliant**: Data protection by design
-- **Zero-Trust Architecture**: No plaintext anywhere
-
-### Audit Requirements:
-- **Access Logging**: All decryption attempts logged
-- **Key Usage**: Track all key operations
-- **Data Integrity**: Verify all encrypted data
-- **Security Incidents**: Immediate breach response
-- **Compliance Audits**: Regular security assessments
-
-## 🔐 ENCRYPTION OPERATIONS
-
-### Binary Encryption:
-```bash
-# Encrypt binary data
-curl -X POST http://localhost:3000/api/binary \
-  -H "Content-Type: application/json" \
-  -d '{
-    "action": "encrypt",
-    "data": {
-      "binary": "10101011",
-      "keyId": "KEY_001",
-      "algorithm": "AES-256-GCM"
-    }
-  }'
-```
-
-### Binary Decryption:
-```bash
-# Decrypt binary data
-curl -X POST http://localhost:3000/api/binary \
-  -H "Content-Type: application/json" \
-  -d '{
-    "action": "decrypt",
-    "data": {
-      "encryptedData": "BASE64_ENCRYPTED_BINARY",
-      "keyId": "KEY_001",
-      "iv": "BASE64_IV",
-      "tag": "BASE64_TAG"
-    }
-  }'
-```
-
-## 🔍 BINARY VALIDATION
-
-### Input Validation:
-- **Binary Format**: Only 0s and 1s allowed
-- **Checksum Verification**: Data integrity validation
-- **Packet Structure**: Strict binary packet format
-- **Type Safety**: Binary type validation
-
-### Processing Rules:
-- **No Plaintext**: Zero text content anywhere
-- **Binary Operations**: All processing in binary
-- **Encrypted Storage**: No plaintext in database
-- **Secure Communication**: Encrypted packet transmission
-
-## 🚀 QUICK START
-
-```bash
-# Clone and install
-git clone https://github.com/craighckby-stack/z-agi.git
-cd z-agi
-npm install
-
-# Start encrypted binary system
-npm run dev
-
-# Access via encrypted interface
-open https://localhost:3000
-```
-
-## 📋 SYSTEM ARCHITECTURE
-
-### Binary Data Flow:
-```
-ENCRYPTED INPUT → DECRYPTION → BINARY VALIDATION → BINARY PROCESSING → ENCRYPTION → ENCRYPTED OUTPUT
-```
-
-### Security Architecture:
-- **Zero-Text Policy**: No plaintext anywhere
-- **End-to-End Encryption**: All data encrypted
-- **Binary Processing**: Operations on encrypted data
-- **Key Management**: Secure key exchange
-- **Audit Logging**: All operations logged
-
-## 🔒 LICENSE
-
-This system implements military-grade encryption with zero-text policy. All data is processed in encrypted binary form only.
-
-**WARNING**: This system contains NO text content. All documentation is binary encryption/decryption information only. No plaintext interfaces are provided.
-
----
-
-**Note**: This is a secure binary processing system with zero-text policy. All operations are performed on encrypted binary data only. No plaintext content exists anywhere in the system.
+The `experiments/` directory contains active research into constraint learning, including automated violation detection patterns and analysis scripts for measuring AGI emergence stability.
